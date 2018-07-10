@@ -147,8 +147,8 @@ header>a>img {
 .center {
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin-top: 30px;
+  padding: 0 5%;
 }
 .lastArticle {
   font: 14px Georgia,Times,"Times New Roman",serif;
@@ -216,32 +216,27 @@ footer {
 }
 
    /*   Icons   */
-.icons {
-  display: flex;
-  flex-direction: column;
-  padding: 40px 0;
-  width: 100%;
-}
-.cockAndReturnsBox, .paymentAndDelivery {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-.cockAndTitle, .returnsAndTitle, .payementAndTitle, .deliveryAndTitle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0 7%;
-  width: 50%;
-}
-.iconsImage {
-  width: 100%;
-}
-h5 {
-  font: italic 16px Georgia, Times, "Times New Roman", serif;
-  color: #777;
-  text-align: center;
-}
+   .icons {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
+   }
+
+   .cockAndTitle, .returnsAndTitle, .payementAndTitle, .deliveryAndTitle {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     margin: 0 7%;
+     width: 35%;
+   }
+   .iconsImage {
+     width: 100%;
+   }
+   h5 {
+     font: italic 16px Georgia, Times, "Times New Roman", serif;
+     color: #777;
+     text-align: center;
+   }
 
    /*   Contacts   */
 .contact {
@@ -255,11 +250,9 @@ h5 {
   font: 16px Georgia, Times, "Times New Roman", serif;
   color: #777;
 }
-.contactUs {
-
-}
 .footerLogo {
   padding: 50px 3% 0;
+  max-width: 250px;
 }
 .infoSite {
   display: none;
@@ -273,6 +266,7 @@ div.followUs>p {
 }
 div.followUs>input {
   width: 90%;
+  max-width: 350px;
   font-style: italic;
 }
 div.followUs>div {
@@ -282,10 +276,12 @@ div.followUs>div {
   margin-top: 25px;
 }
 div.followUs>div>img {
-  width: 50px;
+  width: 20%;
+  max-width: 50px;
 }
-div.infoSiteMobile {
-  display: none;
+div.infoSiteMobile>h3 {
+  font-size: 24px;
+  color: #444;
 }
 
 
@@ -377,9 +373,46 @@ div.infoSiteMobile {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 720px) {
     /* Style adjustments for viewports that meet the condition */
 
+    /* Footer Icons */
+    .cockAndTitle, .returnsAndTitle, .payementAndTitle, .deliveryAndTitle {
+      width: 15%;
+      margin: 0 5%;
+    }
+    /* Footer infoSite */
+    .infoSite {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      font-style: Georgia,Times,"Times New Roman",serif;
+    }
+    div.infoSite>div {
+      margin: 0 3%;
+      width: 25%;
+    }
+    div.infoSite>div>h3 {
+      font-size: 30px;
+      font-weight: 500;
+      color: #444;
+    }
+    div.infoSite>div>h4 {
+      font-size: 16px;
+      font-weight: 500;
+      color: #8C8C8C;
+    }
+    .infoSiteMobile {
+      display: none;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+  /* Footer Icons */
+  .cockAndTitle, .returnsAndTitle, .payementAndTitle, .deliveryAndTitle {
+    width: 15%;
+    margin: 0 5%;
+  }
 }
 
 @media print,
